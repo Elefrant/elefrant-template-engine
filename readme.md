@@ -13,6 +13,12 @@ Use template engine(swig) to render a html page with Elefrant.
 res.render(path, data); // Render html
 ```
 
+Use redirect.
+
+```js
+res.redirect(url); // Redirect
+```
+
 
 ## Launch tests
 
