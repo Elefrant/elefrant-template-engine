@@ -12,14 +12,10 @@ module.exports = {
 			res.render = function(path, data) {
 				var html = template(path, data);
 
-				res.writeHead(200, {
+				res.send(200, html, {
 					'Content-Length': Buffer.byteLength(html),
 					'Content-Type': 'text/html'
 				});
-
-				res.write(html);
-
-				res.end();
 			};
 
 			res.redirect = function redirect(url) {
