@@ -1,7 +1,10 @@
 'use strict';
 
 var component = require('../component'),
+		restify = require('restify'),
 		should = require('should');
+
+var server = restify.createServer();
 
 describe('template engine', function () {
 
@@ -9,7 +12,7 @@ describe('template engine', function () {
 		should.exist(component);
 	});
 
-	it('check register', function () {
-		should(component.register()).be.ok;
+	it('check afterServer', function () {
+		should(component.afterServer({}, server)).be.ok;
 	});
 });
