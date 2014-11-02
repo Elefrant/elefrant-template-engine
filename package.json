@@ -1,0 +1,49 @@
+{
+	"name": "elefrant-template-engine",
+	"version": "0.0.1",
+	"description": "Integrate swig template engine with Elefrant",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/Elefrant/elefrant-template-engine"
+	},
+	"author": "Marcos Sanz <marcos.sanz@13genius.com>",
+	"maintainers": [{
+		"name": "Marcos Sanz",
+		"email": "marcos.sanz@13genius.com",
+		"url": "http://www.mistersanz.com"
+	}],
+	"main": "component",
+	"keywords": [
+		"elefrant-template-engine",
+		"elefrantTemplateEngine",
+		"elefrant",
+		"elefrant.com",
+		"elefrant.io",
+		"component"
+	],
+	"scripts": {
+		"test": "node node_modules/grunt-cli/bin/grunt"
+	},
+	"engines": {
+		"node": ">=0.10.0",
+		"npm": ">=1.4.x",
+		"elefrant": ">=0.2.x"
+	},
+	"dependencies": {
+		"swig": "~1.4.2"
+	},
+	"devDependencies": {
+		"grunt-cli": "~0.1.13",
+		"grunt-contrib-jshint": "~0.10.0",
+		"grunt-mocha-test": "~0.10.0",
+		"grunt": "~0.4.0",
+		"mocha": "~1.18.2",
+		"should": "~3.2.0"
+	},
+	"readmeFilename": "readme.md",
+	"bugs": {
+		"url": "https://github.com/Elefrant/elefrant-template-engine/issues"
+	},
+	"homepage": "https://github.com/Elefrant/elefrant-template-engine"
+}
