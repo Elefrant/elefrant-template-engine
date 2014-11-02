@@ -7,18 +7,22 @@ module.exports = {
 
 	name: 'templateEngine',
 
-	register: function (elefrant) {
-		return function(res, path, data) {
-			var html = template(path, data);
+	afterServer: function (elefrant, server) {
+		return server.use(function(req, res, next) {
+			res.render = function(path, data) {
+				var html = template(path, data);
 
-			res.writeHead(200, {
-				'Content-Length': Buffer.byteLength(html),
-				'Content-Type': 'text/html'
-			});
+				res.writeHead(200, {
+					'Content-Length': Buffer.byteLength(html),
+					'Content-Type': 'text/html'
+				});
 
-			res.write(html);
+				res.write(html);
 
-			res.end();
-		};
+				res.end();
+			};
+
+			next();
+		});
 	}
 };
