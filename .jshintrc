@@ -24,6 +24,7 @@
         "require",
         "exports",
         "module",
+        "deprecate",
         "describe",
         "before",
         "beforeEach",
